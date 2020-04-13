@@ -1,0 +1,321 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+* {
+	box-sizing: border-box;
+}
+body{
+	font-family: 'Monteserrat', sans-serif;
+}
+a{
+	text-decoration: none;
+	color: unset;
+}
+.destaque{
+	background-attachment: fixed;
+    background-image: url(../img/capa-madmax2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    justify-content: space-between;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+}
+.destaque::after{
+	background: linear-gradient( 0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 212, 255, 0) 75% );
+	content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.container{
+	width: 960px;
+	margin: 0 auto;
+	font-family: 'Montserrat', sans-serif;
+}
+ul{
+	list-style: none;
+}
+/* MENU SUPERIOR */
+.container-opcoes{
+	align-items: center;
+    display: flex;
+	justify-content: space-between;
+	font-family: 'Montserrat', sans-serif;
+}
+.opcoes-menu{
+	list-style: none;
+	display: flex;
+	justify-content: space-evenly;
+	width: 70%;
+	font-size: 15px;
+	font-weight: bold;
+	text-transform: uppercase;
+	z-index: 2;
+}
+.menu-superior-item{
+	color: #fff;
+	transition: all 0.2s ease-in-out;
+	cursor: pointer;
+}
+.menu-superior-item:hover{
+	color: #e4bb23;
+}
+.conta-usuario{
+	display: flex;
+    align-items: center;
+}
+.conta-usuario-foto{
+	border-radius: 100%;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+    height: 45px;
+    margin-right: 15px;
+    overflow: hidden;
+	width: 45px;	
+}
+.foto-walt{
+	width: 100%;
+	height: auto;
+}
+.conta-usuario-nome{
+	color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* CONTEUDO DESTAQUE */
+.info-destaque{
+	position: relative;
+	z-index: 2;
+}
+.filme-destaque{
+	display: block;
+	color: #fff;
+	font-size: 4em;
+	text-transform: uppercase;
+	margin: 0;
+	font-weight: bold;
+	line-height: 78px;
+	font-family: 'Monteserrat', sans-serif;
+}
+.genero-destaque{
+	display: flex;
+	margin: 15px 0 30px 0;
+}
+.genero-destaque-item{
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 15px;	
+	margin-right: 20px;
+	font-weight: 400;
+}
+.genero-destaque-item:hover{
+	color:  #e4bb23;
+}
+.trailer-destaque{
+	display: inline-block;
+	position: relative;
+	text-align: center;
+	padding: 15px 50px;
+	background-color: #e4bb23;
+	border-radius: 40px;
+	transition: all 0.2s ease-in-out;
+}
+.assistir-trailer{
+	color: #000;
+	font-size: 15px;
+	margin-bottom: 10px;
+}
+.fa-play-circle{
+	font-size: 25px;
+	margin-left: 10px;
+}
+.trailer-destaque:hover{
+	background-color: #bc9a1d;;
+}
+.data-destaque{
+	padding: 20px 0;
+	font-size: 15px;
+	font-weight: 300;
+}
+.cinemas{
+	color: #fff;
+}
+.data{
+	color: #bc9a1d;;
+}
+
+/* CATALOGO */
+.catalogo{
+	background-color: #f2f2f2;
+	width: 100%;
+	position: relative;
+	display: inline-block;
+}
+.lista-opcoes-catalogo{
+	align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.opcoes-catalogo-item{
+	margin: 0 20px;
+    display: inline-block;
+	padding: 25px 0;
+	font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+	transition: all 0.2s ease-in-out;
+	color: #e4bb23;
+}
+.opcoes-catalogo-item:hover{
+	border-bottom: 1px solid #e4bb23;
+}
+.catalogo-filmes-lista{
+	align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+    width: 100%;
+}
+.catalogo-filmes-lista-itens{
+	background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    overflow: hidden;
+    width: 24%;
+}
+.poster-filme-catalogo{
+	margin: 0;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+	position: relative;
+	display: block;
+}
+img{
+	width: 100%;
+    height: auto;
+}
+.play-filme{
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	justify-content: center;
+	left: 0;
+	opacity: 0;
+	padding: 80px 20px;
+	position: absolute;
+	text-align: center;
+	top: 0;
+	transition: all 0.2s ease-in-out;
+	visibility: visible;
+	width: 100%;
+	z-index: 1;
+}
+.play-filme:hover{
+	opacity: 1;
+	visibility: visible;
+}
+.capa-play-filme{
+	color: #fff;
+    font-size: 50px;
+    transition: all 0.2s ease-in-out;
+}
+.capa-play-filme:hover{
+	color: #e4bb23;
+}
+.capa-nome-filme{
+	color: #e4bb23;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.resumo-filme{
+	padding: 10px;
+}
+.nome-filme{
+	margin: 0;
+	text-transform: uppercase;
+	font-size: 13px;
+	font-weight: bold;
+}
+.genero-filme{
+	font-size: 12px;
+	color: #e4bb23;
+	margin: 10px 0;
+}
+.avaliacao-filme{
+	display: flex;
+	justify-content: space-between;
+	font-size: 20px;
+	font-weight: 700;
+	margin: 0;
+}
+.fa-heart{
+	color: #ccc;
+}
+.fa-heart:hover{
+	color: #e74c3c;
+}
+
+/* FOOTER */
+.footer{
+	background-color: #fff;
+    color: #bababa;
+    padding: 20px 0;
+    text-align: center;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.container-footer{
+	height: 90px;
+	position: relative;
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo-footer{
+	width: unset;
+	height: unset;
+}
+.lista-redes-sociais{
+	display: flex;
+	padding: 0;
+	margin: 0 20px;
+}
+.logo-redes-sociais{
+	font-size: 25px;
+    text-decoration: none;
+	transition: all 0.2s ease-in-out;
+	margin: 0 20px;
+}
+.logo-twitter,
+.logo-facebook,
+.logo-instagram{
+	color: #bababa;
+}
+.logo-twitter:hover,
+.logo-facebook:hover,
+.logo-instagram:hover{
+	color: rgb(8, 149, 243);
+}
+
+
